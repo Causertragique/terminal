@@ -1,0 +1,33 @@
+declare const styles: {
+  readonly card: string;
+  readonly header: string;
+  readonly commandSection: string;
+  readonly commandText: string;
+  readonly description: string;
+  readonly details: string;
+  readonly detailItem: string;
+  readonly detailTitle: string;
+  readonly detailCode: string;
+  readonly contextSection: string;
+  readonly sectionHeader: string;
+  readonly sectionIcon: string;
+  readonly sectionTitle: string;
+  readonly contextText: string;
+  readonly accordionSection: string;
+  readonly accordionTriggerContent: string;
+  readonly warningIcon: string;
+  readonly issuesContent: string;
+  readonly issueItem: string;
+  readonly errorSection: string;
+  readonly errorTitle: string;
+  readonly errorIcon: string;
+  readonly errorText: string;
+  readonly solutionSection: string;
+  readonly solutionTitle: string;
+  readonly solutionIcon: string;
+  readonly solutionText: string;
+  readonly tags: string;
+  readonly checkIcon: string;
+};
+
+export default styles;

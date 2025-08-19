@@ -1,0 +1,73 @@
+.container {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  padding: var(--spacing-6);
+  color: var(--surface-foreground);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.description {
+  color: var(--muted-foreground);
+  margin-bottom: var(--spacing-6);
+  line-height: 1.6;
+}
+
+.commandInfo {
+  background-color: var(--background);
+  padding: var(--spacing-4);
+  border-radius: var(--radius);
+  margin-bottom: var(--spacing-6);
+  border: 1px solid var(--border);
+}
+
+.commandInfo p {
+  margin: 0 0 var(--spacing-2) 0;
+  font-size: 0.9375rem;
+}
+
+.commandCode {
+  font-family: var(--font-family-monospace);
+  background-color: var(--muted);
+  color: var(--foreground);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-sm);
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.accordion {
+  width: 100%;
+}
+
+.accordionHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-weight: 500;
+}
+
+.list {
+  padding-left: var(--spacing-6);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.list li {
+  line-height: 1.6;
+}

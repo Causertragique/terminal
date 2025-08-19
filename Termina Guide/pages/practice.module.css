@@ -1,0 +1,65 @@
+.pageLayout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  height: calc(100vh - 4rem); /* Assuming a 4rem header */
+  gap: var(--spacing-8);
+  padding: var(--spacing-8);
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+  overflow-y: auto;
+  height: 100%;
+  padding-right: var(--spacing-4);
+}
+
+/* Scrollbar styling for main content */
+.mainContent::-webkit-scrollbar {
+  width: 8px;
+}
+
+.mainContent::-webkit-scrollbar-track {
+  background: var(--surface);
+  border-radius: var(--radius-full);
+}
+
+.mainContent::-webkit-scrollbar-thumb {
+  background-color: var(--muted);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--surface);
+}
+
+.mainContent::-webkit-scrollbar-thumb:hover {
+  background-color: var(--border);
+}
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: var(--muted-foreground);
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--border);
+}
+
+.placeholder h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-2);
+  color: var(--surface-foreground);
+}
+
+.loadingContainer {
+  padding: var(--spacing-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}

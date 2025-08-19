@@ -1,0 +1,91 @@
+.terminal {
+  background-color: hsl(224, 15%, 18%);
+  color: var(--foreground);
+  font-family: var(--font-family-monospace);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-4);
+  background-color: hsl(224, 15%, 22%);
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.content {
+  padding: var(--spacing-4);
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.line {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-1);
+}
+
+.line pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-size: 0.9375rem;
+}
+
+.prompt {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.inputLine {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.input {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--foreground);
+  font-family: var(--font-family-monospace);
+  font-size: 0.9375rem;
+  width: 100%;
+  padding: 0;
+}
+
+.command {
+  color: var(--foreground);
+}
+
+.output {
+  color: var(--muted-foreground);
+}
+
+.success {
+  color: var(--success);
+}
+
+.error {
+  color: var(--error);
+}
+
+.successIcon {
+  color: var(--success);
+  flex-shrink: 0;
+}
+
+.errorIcon {
+  color: var(--error);
+  flex-shrink: 0;
+}

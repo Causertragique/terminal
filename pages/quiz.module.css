@@ -1,0 +1,41 @@
+.quizPage {
+  background-color: var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+  padding: var(--spacing-12) var(--spacing-6);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-8);
+  border: 1px solid var(--border);
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.error {
+  text-align: center;
+  color: var(--error);
+  padding: var(--spacing-8);
+}
+
+.backButton {
+  margin-top: var(--spacing-4);
+  padding: var(--spacing-2) var(--spacing-4);
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}

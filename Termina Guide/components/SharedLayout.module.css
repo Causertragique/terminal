@@ -1,0 +1,132 @@
+.layout {
+  min-height: 100vh;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-family-base);
+}
+
+.header {
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-nav);
+}
+
+.headerContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--spacing-4);
+  height: 4rem;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--foreground);
+  text-decoration: none;
+  transition: color var(--animation-duration-fast) ease;
+}
+
+.logo:hover {
+  color: var(--primary);
+}
+
+.nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  min-width: fit-content;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: var(--spacing-6);
+}
+
+.navLink {
+  color: var(--muted-foreground);
+  text-decoration: none;
+  font-weight: 500;
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius);
+  transition: all var(--animation-duration-fast) ease;
+}
+
+.navLink:hover {
+  color: var(--foreground);
+  background-color: var(--muted);
+}
+
+.navLinkActive {
+  color: var(--primary);
+  background-color: color-mix(in srgb, var(--primary), white 95%);
+}
+
+.navLinkActive:hover {
+  color: var(--primary);
+  background-color: color-mix(in srgb, var(--primary), white 90%);
+}
+
+.content {
+  flex: 1;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .headerContainer {
+    padding: 0 var(--spacing-3);
+    height: 3.5rem;
+  }
+
+  .logo {
+    font-size: 1.125rem;
+  }
+
+  .navList {
+    gap: var(--spacing-3);
+  }
+
+  .navLink {
+    padding: var(--spacing-1) var(--spacing-2);
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .headerContainer {
+    padding: 0 var(--spacing-2);
+    flex-direction: column;
+    height: auto;
+    gap: var(--spacing-2);
+    padding-top: var(--spacing-3);
+    padding-bottom: var(--spacing-3);
+  }
+
+  .nav {
+    justify-content: flex-start;
+    order: 2;
+  }
+
+  .navList {
+    gap: var(--spacing-2);
+  }
+
+  .headerRight {
+    order: 1;
+    align-self: flex-end;
+    margin-top: var(--spacing-2);
+  }
+}

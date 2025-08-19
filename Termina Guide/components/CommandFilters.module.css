@@ -1,0 +1,133 @@
+.filtersContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  background-color: var(--surface);
+  padding: var(--spacing-4);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}
+
+.searchWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: var(--spacing-3);
+  color: var(--muted-foreground);
+  pointer-events: none;
+}
+
+.searchInput {
+  padding-left: calc(var(--spacing-3) + 20px + var(--spacing-2));
+  height: 3rem;
+  font-size: 1rem;
+}
+
+.filterControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.categoryFilters {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.filterLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  white-space: nowrap;
+}
+
+.categoryPills {
+  display: flex;
+  gap: var(--spacing-2);
+  flex-wrap: wrap;
+}
+
+.categoryPill {
+  border-radius: var(--radius-full);
+  font-weight: 500;
+}
+
+.pillSkeleton {
+  width: 80px;
+  height: 1.5rem;
+  border-radius: var(--radius-full);
+}
+
+.tagFilter {
+  flex-shrink: 0;
+}
+
+.tagSelectTrigger {
+  width: 180px;
+  height: 2rem;
+  font-size: 0.875rem;
+}
+
+.tagSelectItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.tagSelectedIndicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary);
+}
+
+.activeTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  padding-top: var(--spacing-2);
+  border-top: 1px solid var(--border);
+}
+
+.activeTagBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+
+.removeTagButton {
+  width: 1rem;
+  height: 1rem;
+  margin-left: var(--spacing-1);
+  color: inherit;
+}
+
+.removeTagButton:hover {
+  background-color: color-mix(in srgb, currentColor 20%, transparent);
+}
+
+.errorText {
+  color: var(--error);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .filterControls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .categoryFilters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

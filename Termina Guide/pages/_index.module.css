@@ -1,0 +1,219 @@
+.pageWrapper {
+  min-height: 100vh;
+  background-color: var(--background);
+}
+
+.authBar {
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: var(--spacing-3) 0;
+  position: sticky;
+  top: 0;
+  z-index: var(--z-nav-sticky);
+}
+
+.authBarContent {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.authBarLeft {
+  display: flex;
+  align-items: center;
+}
+
+.authBarRight {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.authSkeleton {
+  display: flex;
+  align-items: center;
+}
+
+.authButtons {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  color: var(--foreground);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.userIcon {
+  width: 1rem;
+  height: 1rem;
+  color: var(--muted-foreground);
+}
+
+.userName {
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-8) var(--spacing-6);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-12);
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--foreground);
+  margin: 0 0 var(--spacing-2);
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-family: var(--font-family-base);
+  font-size: 1.125rem;
+  color: var(--muted-foreground);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.navigationSection {
+  margin-bottom: var(--spacing-12);
+}
+
+.navigationGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-6);
+  margin-bottom: var(--spacing-8);
+}
+
+.navigationCard {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  transition: transform var(--animation-duration-fast) ease,
+              box-shadow var(--animation-duration-fast) ease;
+}
+
+.navigationCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.navigationTitle {
+  font-family: var(--font-family-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.navigationDescription {
+  font-family: var(--font-family-base);
+  font-size: 0.9375rem;
+  color: var(--muted-foreground);
+  line-height: 1.5;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+@media (max-width: 768px) {
+  .authBarContent {
+    padding: 0 var(--spacing-4);
+  }
+
+  .userInfo {
+    font-size: 0.8125rem;
+  }
+
+  .userName {
+    max-width: 100px;
+  }
+
+  .authButtons {
+    gap: var(--spacing-1);
+  }
+
+  .container {
+    padding: var(--spacing-6) var(--spacing-4);
+  }
+
+  .header {
+    margin-bottom: var(--spacing-8);
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .navigationGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-4);
+  }
+
+  .navigationSection {
+    margin-bottom: var(--spacing-8);
+  }
+
+  .navigationCard {
+    padding: var(--spacing-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .authBarContent {
+    flex-direction: column;
+    gap: var(--spacing-2);
+    padding: var(--spacing-2) var(--spacing-4);
+  }
+
+  .authBarLeft,
+  .authBarRight {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .userSection {
+    justify-content: center;
+  }
+}

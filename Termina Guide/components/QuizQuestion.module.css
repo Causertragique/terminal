@@ -1,0 +1,42 @@
+.questionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.questionText {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--surface-foreground);
+  font-family: var(--font-family-monospace);
+  background-color: var(--muted);
+  padding: var(--spacing-4);
+  border-radius: var(--radius);
+}
+
+.optionsContainer {
+  margin-top: var(--spacing-2);
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.radioItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.radioLabel {
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--foreground);
+}
+
+.input {
+  max-width: 400px;
+}
